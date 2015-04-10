@@ -1,0 +1,29 @@
+/*Função*/
+ .background-gradient(@bottom: linear-gradient(to bottom, #3498db, #2980b9), @top: linear-gradient(top, #3498db, #2980b9)) {
+    background-image: -webkit-@top;
+    background-image: -moz-@top;
+    background-image: -ms-@top;
+    background-image: -o-@top;
+    background-image: @bottom;
+}
+.font(@font-size:15px, @font-family:Arial, @text-align:center, @color:#fff) {
+    font-size: @font-size;
+    font-family: @font-family;
+    text-align: @text-align;
+    color:@color;
+}
+.espacos(@margin:0px 0px 0px 0px, @padding:0px 0px 0px 0px) {
+    margin: @margin;
+    padding: @padding;
+}
+.dimension(@width:auto, @height:auto) {
+    height: @height;
+    width: @width;
+}
+.border(@border:0px, @radius:0px, @bshadow:none) {
+    border: @border;
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    box-shadow: @bshadow;
+}

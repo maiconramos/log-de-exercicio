@@ -1,0 +1,103 @@
+/*Função*/
+ .background-gradient(@bottom: linear-gradient(to bottom, #3498db, #2980b9), @top: linear-gradient(top, #3498db, #2980b9)) {
+    background-image: -webkit-@top;
+    background-image: -moz-@top;
+    background-image: -ms-@top;
+    background-image: -o-@top;
+    background-image: @bottom;
+}
+.font(@font-size:15px, @font-family:Arial, @text-align:center, @color:#fff) {
+    font-size: @font-size;
+    font-family: @font-family;
+    text-align: @text-align;
+    color:@color;
+}
+.espacos(@margin:0px 0px 0px 0px, @padding:0px 0px 0px 0px) {
+    margin: @margin;
+    padding: @padding;
+}
+.dimension(@width:auto, @height:auto) {
+    height: @height;
+    width: @width;
+}
+.border(@border:0px, @radius:0px, @bshadow:none) {
+    border: @border;
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    box-shadow: @bshadow;
+}
+
+/*Estilo*/
+ body {
+    .espacos(0px, 0px);
+    .font(none, none, center, none);
+}
+input {
+    .font(15px, Arial, center, #000);
+    .espacos(0px 10px 0px 5px, 0px 0px 0px 0px);
+    .dimension(none, 45px);
+    &[type=date]::-webkit-inner-spin-button {
+        .dimension(none, 45px);
+    }
+}
+.clock {
+    .dimension(none, 45px);
+}
+.btn {
+    .background-gradient();
+    .border(0px, 16px, none);
+    .font(20px, Arial, center, #fff);
+    .espacos(0px, 10px 20px 10px 20px);
+    &:hover {
+        .background-gradient(linear-gradient(to bottom, #3cb0fd, #3408db), linear-gradient(top, #3cb0fd, #3498db));
+    }
+}
+select {
+    .espacos(0px 10px 0px 0px, 0px);
+    .font(18px, Arial, center, #000);
+    line-height: 1.42857143;
+}
+.table {
+    .dimension(700px, 34px);
+    display: inline-table;
+    line-height: 1.42857143;
+    .border(1px solid #000, 4px, 10px 10px 5px #888888);
+    th {
+        .background-gradient();
+        .font(20px, Arial, center, #fff);
+        .border(none, 4px, none);
+    }
+    td {
+        .font(20px, monospace, center, #000);
+    }
+    tr:nth-child(odd) {
+        background: #dbfcfc;
+    }
+    table tr:nth-child(even) {
+        background: #fff;
+    }
+}
+.form {
+    .font(15px, Arial, center, #000);
+    .espacos(0px 0px 20px 0px, 10px);
+    .border(1px solid, 4px, 6px 6px 5px #888888);
+    .dimension(auto, auto);
+    display: inline-flex;
+}
+#resultado {
+    .font(25px, monospace, center, #000);
+    .espacos(20px 20px 20px 20px, 0px);
+}
+h1 {
+    .font(30px, monospace, center, #000);
+    .espacos(10px 0px 70px 00px, 0px);
+}
+h4 {
+    .font(18px, monospace, center, #000);
+    .espacos(0px 0px 5px 0px, 0px);
+}
+.calendar {
+    .espacos(0px, 0px 15px 0px 0px);
+    .dimension(none, 45px);
+}
