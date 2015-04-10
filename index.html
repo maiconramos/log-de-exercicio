@@ -11,19 +11,17 @@
     
 <body>
      <h1 id="log">Log de Exercícios</h1>
-
     <div class="painel">
          <h4> Adicionar Exercícios</h4>
-
-        <form class="form" id="form" action="mostrar()">
+        <form class="form" id="form" action="mostrar()" onsubmit="valida(this);" >
             <img src="img/clock.jpg" class="clock" alt="relogio" />
-            <input id="horas" type="number" autofocus="autofocus" name="horas_exercicio" required="true">
+            <input id="horas" type="number" autofocus="autofocus" placeholder="Duração" required />
             <select id="modalidade">
                 <option value="corrida">Corrida</option>
                 <option value="natação">Natação</option>
                 <option value="bicicleta">Bicicleta</option>
             </select>
-            <input type="date" id="data" required value="" />
+            <input type="date" id="data" required />
             <img src="img/iconeCalendario.png" alt="calendario" class="calendar" />
             <button class="btn" type="button" title="adicionar" id="add" onclick="inserir()">Add</button>
         </form>
